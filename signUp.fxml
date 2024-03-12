@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="623.0" prefWidth="713.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.books.controller.SignUpController">
+   <children>
+      <Label layoutX="299.0" layoutY="57.0" prefHeight="49.0" prefWidth="140.0" text="Register" textFill="#431b94">
+         <font>
+            <Font name="Rekha" size="30.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtUsername" layoutX="91.0" layoutY="188.0" prefHeight="42.0" prefWidth="232.0" promptText="username" />
+      <TextField fx:id="txtemaiAddress" layoutX="91.0" layoutY="270.0" prefHeight="42.0" prefWidth="232.0" promptText="emailAddress" />
+      <TextField fx:id="txtPaasword" layoutX="91.0" layoutY="352.0" prefHeight="42.0" prefWidth="232.0" promptText="password" />
+      <JFXButton fx:id="btnSignUp" buttonType="RAISED" layoutX="130.0" layoutY="428.0" onAction="#btnSignUpOnAction" prefHeight="26.0" prefWidth="134.0" style="-fx-background-color: F2AFEF;" text="SignUp">
+         <font>
+            <Font name="Rekha" size="19.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="339.0" fitWidth="281.0" layoutX="357.0" layoutY="172.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/signup.jpeg" />
+         </image>
+      </ImageView>
+      <Text layoutX="91.0" layoutY="512.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Already have an account" wrappingWidth="175.7294921875" />
+      <Text fx:id="txtLogin" fill="#123897" layoutX="276.0" layoutY="511.0" onMouseClicked="#txtLoginOnClicked" strokeType="OUTSIDE" strokeWidth="0.0" text="Login" underline="true" wrappingWidth="71.7294921875">
+         <font>
+            <Font name="Rekha" size="22.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>
