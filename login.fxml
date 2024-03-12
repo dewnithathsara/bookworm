@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="636.0" prefWidth="735.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.books.controller.LoginController">
+   <children>
+      <Label layoutX="292.0" layoutY="64.0" prefHeight="41.0" prefWidth="143.0" text="LOGIN" textFill="#830c0c">
+         <font>
+            <Font name="Rekha" size="32.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtusername" layoutX="98.0" layoutY="195.0" prefHeight="38.0" prefWidth="236.0" promptText="Enter username" />
+      <TextField fx:id="txtpassword" layoutX="98.0" layoutY="286.0" prefHeight="38.0" prefWidth="236.0" promptText="enter password" />
+      <JFXButton fx:id="btnLogin" buttonType="RAISED" layoutX="102.0" layoutY="380.0" onAction="#btnLoginOnAction" prefHeight="30.0" prefWidth="227.0" style="-fx-background-color: #CAA6A6;" text="Login">
+         <font>
+            <Font name="Rekha" size="23.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="404.0" fitWidth="266.0" layoutX="421.0" layoutY="184.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/girl.jpeg" />
+         </image>
+      </ImageView>
+      <Text layoutX="97.0" layoutY="517.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Don't have an account" wrappingWidth="100.0" />
+      <Text fx:id="txtSignUp" fill="#2b1aae" layoutX="242.0" layoutY="517.0" onMouseClicked="#signUpOnClicked" strokeType="OUTSIDE" strokeWidth="0.0" text="Signup" underline="true" wrappingWidth="100.0">
+         <font>
+            <Font name="Rekha" size="19.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>
