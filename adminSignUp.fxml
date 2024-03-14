@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="625.0" prefWidth="696.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.books.controller.AdminSignUpController">
+   <children>
+      <Label layoutX="251.0" layoutY="41.0" prefHeight="42.0" prefWidth="172.0" text="Admin Sign Up" textFill="#1b2d80">
+         <font>
+            <Font name="Rekha" size="21.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnSignUp" buttonType="RAISED" layoutX="80.0" layoutY="375.0" onAction="#btnSignUpOnAction" prefHeight="33.0" prefWidth="191.0" style="-fx-background-color: teal;" text="Sign up" />
+      <ImageView fitHeight="270.0" fitWidth="255.0" layoutX="378.0" layoutY="229.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/admin.jpeg" />
+         </image>
+      </ImageView>
+      <Text layoutX="80.0" layoutY="519.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Already have an account" wrappingWidth="116.7294921875" />
+      <Text fx:id="textSignUp" fill="#17308a" layoutX="229.0" layoutY="527.0" onMouseClicked="#textSignUpOnAction" strokeType="OUTSIDE" strokeWidth="0.0" text="Sign up" underline="true" wrappingWidth="62.7294921875">
+         <font>
+            <Font name="Rekha" size="16.0" />
+         </font>
+      </Text>
+      <TextField fx:id="textName" layoutX="70.0" layoutY="155.0" prefHeight="24.0" prefWidth="191.0" />
+      <TextField fx:id="textEmail" layoutX="80.0" layoutY="229.0" prefHeight="24.0" prefWidth="191.0" />
+      <TextField fx:id="textPassword" layoutX="80.0" layoutY="301.0" prefHeight="24.0" prefWidth="191.0" />
+   </children>
+</AnchorPane>
