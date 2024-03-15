@@ -26,35 +26,55 @@ public class Navigation {
                 window.setTitle("Welcome");
                 initUI("hello-view.fxml");
                 break;
-                case SIDEPANEL:
+            case SIDEPANEL:
                 window.setTitle("SidePanel");
                 initUI("sidePanel.fxml");
                 break;
-                case USER:
+            case USER:
                 window.setTitle("Users");
                 initUI("user.fxml");
                 break;
-                case ADMINLOGIN:
+            case ADMINLOGIN:
                 window.setTitle("admin login");
                 initUI("adminLogin.fxml");
                 break;
-                case ADMINSIGNUP:
+            case ADMINSIGNUP:
                 window.setTitle("admin Sign Up");
                 initUI("adminSignUp.fxml");
                 break;
-                case ADMIN:
+            case ADMIN:
                 window.setTitle("Admin");
                 initUI("admin.fxml");
                 break;
-                case BOOK:
+            case BOOK:
                 window.setTitle("Book");
                 initUI("book.fxml");
                 break;
-                case LIBRARYBRANCH:
+            case LIBRARYBRANCH:
                 window.setTitle("Library branch");
                 initUI("libraryBranch.fxml");
                 break;
-                default:
+            case TRANSACTIONMANAGE:
+                window.setTitle("transaction branch");
+                initUI("transaction.fxml");
+                break;
+            case TRANSACTIONHISTORY:
+                window.setTitle("transaction branch");
+                initUI("transaction.fxml");
+                break;
+                case MYBOOKS:
+                window.setTitle("Mybooks ");
+                initUI("mybooks.fxml");
+                break;
+                case BORROWBOOKS:
+                window.setTitle("borrow ");
+                initUI("borrowbooks.fxml");
+                break;
+                case BORROWINGBOOKS:
+                window.setTitle("borrow ");
+                initUI("borrowingbooks.fxml");
+                break;
+            default:
                 System.out.println("Mukuth Natho");
         }
     }
