@@ -1,0 +1,5 @@
+package org.example.books.util;
+
+public enum Route {
+    LOGIN,SIGNUP,WELCOME,USER,SIDEPANEL,ADMINLOGIN,ADMINSIGNUP,ADMIN,BOOK,LIBRARYBRANCH
+}
