@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.example.books.configaration.FactoryConfiguration;
 import org.example.books.dao.custom.UserDao;
+import org.example.books.entities.Book;
 import org.example.books.entities.User;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
@@ -66,7 +67,7 @@ try{
         Session session = FactoryConfiguration.getInstance().getSession();
         Transaction transaction = session.beginTransaction();
         try {
-            // Constructing the HQL query to retrieve username and password
+           
             String hql = "SELECT u.username, u.password FROM User u WHERE u.username = :username";
             Query<Object[]> query = session.createQuery(hql, Object[].class);
             query.setParameter("username", user.getUsername()); // Assuming User class has getUsername method
@@ -98,6 +99,75 @@ try{
         }
 
         return false; // Default to false if any exception occurs
+    }
+
+    @Override
+    public boolean update(User user) {
+        Session session= FactoryConfiguration.getInstance().getSession();
+        Transaction transaction= session.beginTransaction();
+        try{
+       
+            System.out.println("hiiiiiiiiiiii");
+            session.save(user);
+            
+    
+            transaction.commit();
+            System.out.println(user.toString());
+            return true;
+           
+        } catch (Exception e) {
+            if (transaction != null) {
+                transaction.rollback();
+            }
+            e.printStackTrace();
+            return false;
+        }
+
+    }
+
+    @Override
+    public User search(String userName) {
+    Session session= FactoryConfiguration.getInstance().getSession();
+        Transaction transaction= session.beginTransaction();
+        String hql = "FROM User b WHERE u.username = :userName";
+        Query<User> query = session.createQuery(hql, User.class);
+        query.setParameter("userName", userName);
+        List<User> results = query.getResultList();
+        transaction.commit();
+        session.close();
+        if (!results.isEmpty()) {
+            return results.get(0); 
+        } else {
+            return null; 
+        }
+    }
+
+    @Override
+    public boolean delete(String name) {
+        Session session= FactoryConfiguration.getInstance().getSession();
+        Transaction transaction= session.beginTransaction();
+        try{
+            String hql = "DELETE FROM User u WHERE u.username = :userName";
+            Query query = session.createQuery(hql);
+            query.setParameter("userName", name);
+            
+            transaction.commit();
+            return query.executeUpdate()>0;
+        } catch (Exception e) {
+            if (transaction != null) {
+                transaction.rollback();
+            }
+            e.printStackTrace();
+            return  false;
+        } finally {
+            session.close();
+        }
+    }
+
+    @Override
+    public User getbyId(Long userId) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getbyId'");
     }
     }
 
