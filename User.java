@@ -3,30 +3,44 @@ package org.example.books.entities;
 
 import java.util.List;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 //import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.JoinTable;
+import jakarta.persistence.ManyToMany;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
-import jakarta.persistence.Table;
+
 @Entity
-@Table(name = "users")
 public class User {
  
 @Id
 @GeneratedValue(strategy = GenerationType.IDENTITY)
-@Column(name="Id")
+
   private Long Id;
- @Column(name="username")
+ @Column(nullable =false)
   private String username;
-  @Column(name="email")
+  @Column(nullable=false)
   private String emailAddress;
-  @Column(name="password")
+  @Column(nullable = false)
   private String password;
-  @OneToMany(mappedBy = "user")
-    private List<Transaction> transactions;
+  @ManyToOne
+  private LibraryBranch branch;
+
+ @ManyToMany
+    @JoinTable(
+            name = "Transaction",
+           joinColumns =  @JoinColumn(name = "userId"),
+            inverseJoinColumns = @JoinColumn(name = "bookId")
+    )
+    private List<Book> bookList;
+   // @OneToMany(mappedBy="library_branch")
+   // private List<LibraryBranch> libraryBranchs;
 
   public User(){
 
@@ -40,6 +54,15 @@ public class User {
   }
  
   
+  public User(Long id, String username, String emailAddress, String password, LibraryBranch branch,
+      List<Book> bookList) {
+    Id = id;
+    this.username = username;
+    this.emailAddress = emailAddress;
+    this.password = password;
+    this.branch = branch;
+    this.bookList = bookList;
+  }
   public Long getId() {
     return Id;
   }
@@ -65,17 +88,22 @@ public class User {
   public void setPassword(String password) {
     this.password = password;
   }
+  
+  public LibraryBranch getBranch() {
+    return branch;
+  }
+  public void setBranch(LibraryBranch branch) {
+    this.branch = branch;
+  }
+  public List<Book> getBookList() {
+    return bookList;
+  }
+  public void setBookList(List<Book> bookList) {
+    this.bookList = bookList;
+  }
   @Override
   public String toString() {
     return "User [Id=" + Id + ", username=" + username + ", emailAddress=" + emailAddress + ", password=" + password
-        + ", transactions=" + transactions + "]";
+        + ", branch=" + branch + ", bookList=" + bookList + "]";
   }
-  public List<Transaction> getTransactions() {
-    return transactions;
-  }
-  public void setTransactions(List<Transaction> transactions) {
-    this.transactions = transactions;
-  }
-  
 }
-
