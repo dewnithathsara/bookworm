@@ -10,5 +10,13 @@ public interface UserDao extends SuperDao{
     boolean saveUser(User entity);
 
     boolean userLogin(User user);
+
+    boolean update(User user);
+
+    User search(String userName);
+
+    boolean delete(String name);
+
+    User getbyId(Long userId);
     
 }
