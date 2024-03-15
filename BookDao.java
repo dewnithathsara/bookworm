@@ -13,6 +13,8 @@ public interface BookDao extends SuperDao {
 
     boolean update(Book book);
 
-    Book get(Long bookTitle);
+    Book get(String bookTitle);
+
+    Book get(Long book);
     
 }
