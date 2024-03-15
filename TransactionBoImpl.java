@@ -24,17 +24,15 @@ public class TransactionBoImpl implements TransactionBo {
     @Override
     public List<TransactionDto> getUnreturned(Long userId) throws SQLException {
         // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getUnreturned'");
+      return null;
     }
-
     @Override
     public TransactionDto gettransactionBykUser(Long bookId, Long userId) throws SQLException {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'gettransactionBykUser'");
+        return null;
     }
 
     @Override
-    public void saveTransaction(Long userId, Long bookTitle, TransactionDto dto) throws SQLException {
+    public void saveTransaction(Long userId, String bookTitle, TransactionDto dto) throws SQLException {
        User user = userDao.getbyId(userId);
         Book book = bookDao.get(bookTitle);
         if (user!=null && book!=null){
@@ -69,6 +67,30 @@ public class TransactionBoImpl implements TransactionBo {
             dtoList.add(new TransactionDto(transaction.getTransactionId(), transaction.getUser().getId(),transaction.getUser().getUsername(),transaction.getBook().getLibraryBranch().getBranchName(),transaction.getBook().getBookId(),transaction.getBook().getTitle(),transaction.getBorrwDate(),transaction.getDue(),transaction.getReturned(),transaction.getIsReturn()));
         }
         return dtoList;
+    }
+
+    @Override
+    public TransactionDto search(Long id) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'search'");
+    }
+
+    @Override
+    public List<TransactionDto> getHistory(String username) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getHistory'");
+    }
+
+    @Override
+    public List<TransactionDto> getBookDetails() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getBookDetails'");
+    }
+
+    @Override
+    public List<TransactionDto> getMybooks() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getMybooks'");
     }
     
 }

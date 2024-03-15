@@ -1,5 +1,7 @@
 package org.example.books.bo.impl;
 
+import java.util.List;
+
 import org.example.books.bo.BoFactory;
 import org.example.books.bo.custom.BookBo;
 import org.example.books.dao.DaoFactory;
@@ -40,6 +42,12 @@ BookDao dao=(BookDao)DaoFactory.getDaoFactory().getDaoTypes(DaoFactory.DaoTypes.
        
         book.getLibraryBranch();
         return dao.update(book);
+    }
+
+    @Override
+    public List<BookDto> getBookDetails() {
+        // TODO Auto-generated method stub
+       return null;
     }
     
 }
