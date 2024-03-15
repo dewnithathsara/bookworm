@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="598.0" prefWidth="655.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.books.controller.BookController">
+   <children>
+      <Label layoutX="101.0" layoutY="47.0" prefHeight="21.0" prefWidth="151.0" text="Manage Books" textFill="#6f1e83">
+         <font>
+            <Font name="Rekha" size="23.0" />
+         </font>
+      </Label>
+      <TextField fx:id="texttitle" layoutX="68.0" layoutY="126.0" prefHeight="37.0" prefWidth="216.0" promptText="title" />
+      <TextField fx:id="textgenere" layoutX="67.0" layoutY="186.0" prefHeight="37.0" prefWidth="216.0" promptText="genere" />
+      <TextField fx:id="textauthor" layoutX="67.0" layoutY="243.0" prefHeight="37.0" prefWidth="216.0" promptText="author" />
+      <TextField fx:id="textauthors" layoutX="68.0" layoutY="299.0" prefHeight="37.0" prefWidth="216.0" promptText="branch" />
+      <ImageView fitHeight="171.0" fitWidth="151.0" layoutX="382.0" layoutY="176.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/fine%20print.jpeg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="158.0" fitWidth="163.0" layoutX="505.0" layoutY="107.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/shatter%20me.jpeg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="158.0" fitWidth="117.0" layoutX="513.0" layoutY="299.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/twited%20love.jpeg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="171.0" fitWidth="114.0" layoutX="379.0" layoutY="377.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/%20Little%20Prince%20.jpeg" />
+         </image>
+      </ImageView>
+      <TextField fx:id="textstatus" layoutX="67.0" layoutY="359.0" prefHeight="37.0" prefWidth="216.0" promptText="status" />
+      <TextField fx:id="txtsearch" layoutX="379.0" layoutY="35.0" onAction="#searchOnAction" promptText="search" />
+      <JFXButton fx:id="btnSave" layoutX="49.0" layoutY="441.0" onAction="#btnSaveOnAction" prefHeight="37.0" prefWidth="84.0" text="save" />
+      <JFXButton fx:id="btnDelete" layoutX="141.0" layoutY="441.0" onAction="#btnDeleteOnAction" prefHeight="37.0" prefWidth="84.0" text="delete" />
+      <JFXButton fx:id="btnUpdate" layoutX="242.0" layoutY="441.0" onAction="#btnUpdateOnAction" prefHeight="37.0" prefWidth="84.0" text="update" />
+   </children>
+</AnchorPane>

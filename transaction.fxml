@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="598.0" prefWidth="655.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.books.controller.TransactionController">
+   <children>
+      <TextField fx:id="txtReturned" layoutX="65.0" layoutY="355.0" prefHeight="40.0" prefWidth="191.0" promptText="returned date" />
+      <TextField fx:id="txtUserId" layoutX="64.0" layoutY="179.0" prefHeight="33.0" prefWidth="185.0" promptText="userId" />
+      <TextField fx:id="txtBookName" layoutX="358.0" layoutY="172.0" prefHeight="33.0" prefWidth="185.0" promptText="book name" />
+      <TextField fx:id="txtBorrowed" layoutX="64.0" layoutY="266.0" prefHeight="40.0" prefWidth="185.0" promptText="borrwed date" />
+      <TextField fx:id="txtDue" layoutX="358.0" layoutY="260.0" prefHeight="33.0" prefWidth="185.0" promptText="due date" />
+      <TextField fx:id="txtsearch" layoutX="403.0" layoutY="66.0" onAction="#searchOnAction" prefHeight="33.0" prefWidth="191.0" promptText="search here" />
+      <JFXButton fx:id="btnSave" layoutX="73.0" layoutY="438.0" onAction="#btnSaveOnAction" prefHeight="33.0" prefWidth="108.0" text="Save" />
+      <JFXButton fx:id="btnUpdate" layoutX="228.0" layoutY="438.0" onAction="#btnUpdateOnAction" prefHeight="33.0" prefWidth="108.0" text="update" />
+      <JFXButton fx:id="btnDelete" layoutX="397.0" layoutY="438.0" onAction="#btnDeleteOnAction" prefHeight="33.0" prefWidth="108.0" text="delete" />
+      <JFXButton fx:id="btnHistory" layoutX="336.0" layoutY="519.0" onAction="#btnHistoryOnAction" prefHeight="33.0" prefWidth="128.0" text="Go to history" />
+   </children>
+</AnchorPane>

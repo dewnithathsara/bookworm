@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="598.0" prefWidth="822.0" style="-fx-background-color: mediumpurple;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.books.controller.AdminController">
+   <children>
+      <AnchorPane fx:id="pane" layoutX="173.0" prefHeight="598.0" prefWidth="655.0" style="-fx-background-color: white;">
+         <children>
+            <TextField fx:id="tstsearch" layoutX="411.0" layoutY="46.0" onKeyPressed="#searchOnPressed" />
+            <TableView fx:id="tablebook" layoutX="51.0" layoutY="96.0" prefHeight="392.0" prefWidth="554.0">
+              <columns>
+                <TableColumn fx:id="bookId" prefWidth="120.0" text="BookId" />
+                <TableColumn fx:id="bookName" prefWidth="201.0" text="BookName" />
+                  <TableColumn fx:id="uthor" prefWidth="232.0" text="author" />
+              </columns>
+            </TableView>
+         </children></AnchorPane>
+      <JFXButton fx:id="btnbook" layoutY="170.0" onAction="#btnBookOnAction" prefHeight="33.0" prefWidth="173.0" text="Book Management" />
+      <JFXButton fx:id="btnLibrary" layoutY="229.0" onAction="#btnLibraryOnAction" prefHeight="33.0" prefWidth="173.0" text="Library Management" />
+      <JFXButton fx:id="btnTransaction" layoutY="293.0" onAction="#btnTransactionOnAction" prefHeight="33.0" prefWidth="173.0" text="Transaction " />
+      <JFXButton fx:id="btnLogOut" layoutY="489.0" onAction="#btnLogOutOnAction" prefHeight="33.0" prefWidth="173.0" text="Logout" />
+      <JFXButton fx:id="btnBorrowing" layoutX="-4.0" layoutY="358.0" onAction="#BtnBorrowingOnAction" prefHeight="24.0" prefWidth="171.0" text=" Borrowing Managemnt" />
+   </children>
+</AnchorPane>

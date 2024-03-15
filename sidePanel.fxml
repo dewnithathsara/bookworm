@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="610.0" prefWidth="696.0" style="-fx-background-color: yellow;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.books.controller.SidePanelController">
+   <children>
+      <AnchorPane fx:id="pane" layoutX="141.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="610.0" prefWidth="554.0" style="-fx-background-color: white;">
+         <children>
+            <TableView fx:id="tableDue" layoutX="83.0" layoutY="158.0" prefHeight="325.0" prefWidth="389.0">
+              <columns>
+                <TableColumn fx:id="columnbook" prefWidth="169.0" text="bookName" />
+                <TableColumn fx:id="columnDueDte" prefWidth="219.0" text="DueDate" />
+              </columns>
+            </TableView>
+         </children></AnchorPane>
+      <JFXButton fx:id="btnHomeOnAction" buttonType="RAISED" layoutY="183.0" onAction="#btnHomeOnAction" prefHeight="24.0" prefWidth="141.0" text="Home" />
+      <JFXButton fx:id="btnMyBooks" layoutY="216.0" onAction="#btnMyBookOnAction" prefHeight="24.0" prefWidth="141.0" text="My books" />
+      <JFXButton fx:id="btnMyProfile" layoutY="259.0" onAction="#btnMyprofileOnAction" prefHeight="24.0" prefWidth="141.0" text="My profile" />
+      <JFXButton fx:id="btnLOgOUt" layoutY="504.0" onAction="#btnLogoutOnAction" prefHeight="24.0" prefWidth="141.0" text="Logout" />
+      <JFXButton fx:id="btnBorrow" layoutX="6.0" layoutY="315.0" onAction="#btnBorrowOnAction" prefHeight="24.0" prefWidth="130.0" text="borrowing" />
+   </children>
+</AnchorPane>

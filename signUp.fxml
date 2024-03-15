@@ -35,5 +35,15 @@
             <Font name="Rekha" size="22.0" />
          </font>
       </Text>
+      <Label fx:id="lblId" layoutX="154.0" layoutY="113.0" prefHeight="49.0" prefWidth="158.0" textFill="#431b94">
+         <font>
+            <Font name="Rekha" size="30.0" />
+         </font>
+      </Label>
+      <Label layoutX="91.0" layoutY="113.0" prefHeight="49.0" prefWidth="40.0" text="Id:" textFill="#431b94">
+         <font>
+            <Font name="Rekha" size="30.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

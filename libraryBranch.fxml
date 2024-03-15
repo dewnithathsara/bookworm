@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="598.0" prefWidth="655.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.books.controller.LibraryBranchController">
+   <children>
+      <Label layoutX="129.0" layoutY="29.0" prefHeight="46.0" prefWidth="289.0" text="Library Branch Management">
+         <font>
+            <Font name="Rekha" size="22.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtbranchName" layoutX="57.0" layoutY="160.0" prefHeight="52.0" prefWidth="188.0" promptText="branchName" />
+      <TextField fx:id="txtadminId" layoutX="58.0" layoutY="247.0" prefHeight="46.0" prefWidth="188.0" promptText="adminId" />
+      <TextField fx:id="txtDetails" layoutX="61.0" layoutY="319.0" prefHeight="46.0" prefWidth="181.0" promptText="branchdetails" />
+      <JFXButton fx:id="btnSave" layoutX="23.0" layoutY="397.0" onAction="#btnSaveOnAction" prefHeight="39.0" prefWidth="75.0" style="-fx-background-color: lightblue;" text="save" />
+      <JFXButton fx:id="btnDelete" layoutX="187.0" layoutY="397.0" onAction="#btnDeleteOnAction" prefHeight="39.0" prefWidth="75.0" style="-fx-background-color: FF407D;" text="delete" />
+      <JFXButton fx:id="btnUpdate" layoutX="104.0" layoutY="397.0" onAction="#btnUpdateOnAction" prefHeight="39.0" prefWidth="75.0" style="-fx-background-color: #76ABAE;" text="update" />
+      <TextField fx:id="txtSearch" layoutX="388.0" layoutY="90.0" onAction="#txtSearchOnAction" promptText="search here" />
+      <ImageView fitHeight="495.0" fitWidth="340.0" layoutX="280.0" layoutY="218.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/library_branch.jpeg" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
