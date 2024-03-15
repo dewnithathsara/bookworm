@@ -1,34 +1,35 @@
 package org.example.books.dto;
 
 public class UserDto {
-    private String Id;
-    private String name;
+    
+   
     private String username;
     private String emailAddress;
     private String password;
+    private Long branchId;
    
   
     public UserDto(){
   
     }
-    public UserDto(String Id,String name,String username, String emailAddress,String password){
-      Id=this.Id;
-      name=this.name;
+    public UserDto(String username, String emailAddress,String password){
+     
+      
       username=this.username;
       emailAddress=this.emailAddress;
       password=this.password;
     }
-    public String getId() {
-      return Id;
+   
+   
+    public UserDto(String username, String emailAddress, String password, Long branchId) {
+      this.username = username;
+      this.emailAddress = emailAddress;
+      this.password = password;
+      this.branchId = branchId;
     }
-    public void setId(String id) {
-      Id = id;
-    }
-    public String getName() {
-      return name;
-    }
-    public void setName(String name) {
-      this.name = name;
+    public UserDto(String username, String password) {
+      this.username = username;
+      this.password = password;
     }
     public String getUsername() {
       return username;
@@ -48,9 +49,18 @@ public class UserDto {
     public void setPassword(String password) {
       this.password = password;
     }
+
+
+    
+    public Long  getLibraryBranch() {
+      return branchId;
+    }
+    public void setLibraryBranch(Long branchId) {
+      this.branchId = branchId;
+    }
     @Override
     public String toString() {
-      return "User [Id=" + Id + ", name=" + name + ", username=" + username + ", emailAddress=" + emailAddress
+      return "User [username=" + username + ", emailAddress=" + emailAddress
           + ", password=" + password + "]";
     }
     
