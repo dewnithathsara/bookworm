@@ -98,6 +98,12 @@ public class BookDaoImpl implements  BookDao{
         // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'get'");
     }
+
+    @Override
+    public Book get(String bookTitle) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'get'");
+    }
         
     
 }
