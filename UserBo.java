@@ -9,5 +9,13 @@ public interface UserBo extends SuperBo{
     boolean saveUser(String username,String email,String password);
 
     boolean login(UserDto dto);
+
+    boolean update(String username,String email, String password);
+
+    UserDto search(String userName);
+
+    UserDto  searchMybooks(String name);
+
+    boolean deleteUser(String name);
     
 }

@@ -1,5 +1,7 @@
 package org.example.books.bo.custom;
 
+import java.util.List;
+
 import org.example.books.bo.SuperBo;
 import org.example.books.dto.BookDto;
 
@@ -14,6 +16,8 @@ public interface BookBo extends SuperBo {
     boolean delete(String name);
 
     boolean update(String name, String author, String genere, Long branch);
+
+    List<BookDto> getBookDetails();
 
     
 }

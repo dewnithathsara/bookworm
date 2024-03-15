@@ -5,10 +5,12 @@ import org.example.books.dto.LibraryBranchDto;
 
 public interface LibraryBranchBo extends SuperBo{
 
-    boolean saveBranch(String name, String branchDetails);
+    boolean saveBranch(String name);
 
     boolean delete(String name);
 
     LibraryBranchDto search(String name);
+
+    boolean update(String name);
     
 }
